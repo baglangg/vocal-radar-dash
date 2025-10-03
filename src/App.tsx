@@ -11,6 +11,10 @@ import Calls from "./pages/Calls";
 import CallDetails from "./pages/CallDetails";
 import Clients from "./pages/Clients";
 import Settings from "./pages/Settings";
+import Groups from "./pages/Groups";
+import Tickets from "./pages/Tickets";
+import Users from "./pages/Users";
+import Audits from "./pages/Audits";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -42,9 +46,10 @@ const App = () => (
           <Route path="/calls" element={<AppLayout><Calls /></AppLayout>} />
           <Route path="/calls/:id" element={<AppLayout><CallDetails /></AppLayout>} />
           <Route path="/clients" element={<AppLayout><Clients /></AppLayout>} />
-          <Route path="/audits" element={<AppLayout><div className="text-center py-12"><h2 className="text-2xl font-semibold">Аудит</h2><p className="text-muted-foreground mt-2">Coming soon</p></div></AppLayout>} />
-          <Route path="/groups" element={<AppLayout><div className="text-center py-12"><h2 className="text-2xl font-semibold">Группы</h2><p className="text-muted-foreground mt-2">Coming soon</p></div></AppLayout>} />
-          <Route path="/tickets" element={<AppLayout><div className="text-center py-12"><h2 className="text-2xl font-semibold">Тикеты</h2><p className="text-muted-foreground mt-2">Coming soon</p></div></AppLayout>} />
+          <Route path="/audits" element={<AppLayout><Audits /></AppLayout>} />
+          <Route path="/groups" element={<AppLayout><Groups /></AppLayout>} />
+          <Route path="/tickets" element={<AppLayout><Tickets /></AppLayout>} />
+          <Route path="/users" element={<AppLayout><Users /></AppLayout>} />
           <Route path="/settings" element={<AppLayout><Settings /></AppLayout>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
